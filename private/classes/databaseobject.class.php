@@ -122,7 +122,7 @@ class DatabaseObject {
 
     }
 
-    protected function update() {
+    public function update() {
         $this->validate();
         if(!empty($this->errors)) {
             return false;

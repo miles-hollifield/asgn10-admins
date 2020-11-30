@@ -23,7 +23,7 @@ if(is_post_request()) {
   $result = $admin->update();
   
   if($result == true) {
-    $_SESSION['message'] = 'The admin was updated successfully.';
+    $session->message('The admin was updated successfully.');
     redirect_to(url_for('/bird-staff/admins/show.php?id=' . $admin->id));
   } else {
     // show errors
